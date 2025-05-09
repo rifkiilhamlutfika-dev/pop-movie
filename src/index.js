@@ -7,7 +7,7 @@ import StarRating from "./components/Rating.js/StarRating";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <StarRating max={5} colorFull="#f23a42" colorStroke="blue" size={50} />
+    <App />
+    {/* <StarRating max={5} colorFull="#f23a42" colorStroke="blue" size={50} /> */}
   </React.StrictMode>
 );

@@ -1,3 +1,5 @@
+import ListMovie from "./ListMovie";
+
 export default function WatchList({ watched }) {
   const average = (arr) =>
     arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
@@ -29,28 +31,7 @@ export default function WatchList({ watched }) {
         </div>
       </div>
 
-      <ul className="list">
-        {watched.map((movie) => (
-          <li key={movie.imdbID}>
-            <img src={movie.Poster} alt={`${movie.Title} poster`} />
-            <h3>{movie.Title}</h3>
-            <div>
-              <p>
-                <span>🎬</span>
-                <span>{movie.imdbRating}</span>
-              </p>
-              <p>
-                <span>🌟</span>
-                <span>{movie.userRating}</span>
-              </p>
-              <p>
-                <span>⏳</span>
-                <span>{movie.runtime} min</span>
-              </p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <ListMovie movies={watched} type="watched" />
     </>
   );
 }
